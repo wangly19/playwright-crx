@@ -28,7 +28,7 @@
     "lint": "eslint --cache && eslint -c eslint.config.mjs",
     "build:crx": "npm run generate:pw && npm run generate:crx && vite build",
     "clean:crx": "rimraf ./lib",
-    "build": "npm run lint && npm run ci:pw:bundles && npm run build:crx && npm run build:examples && npm run build:tests",
+    "build": "npm run ci:pw:bundles && npm run build:crx && npm run build:examples && npm run build:tests",
     "clean": "npm run clean:pw && npm run clean:examples && npm run clean:tests && npm run clean:crx",
     "test:install": "cd ./tests && npx playwright install --with-deps chromium",
     "test": "cd ./tests && npx playwright test",

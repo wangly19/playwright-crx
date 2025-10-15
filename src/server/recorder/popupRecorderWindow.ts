@@ -55,7 +55,7 @@ export class PopupRecorderWindow implements RecorderWindow {
       chrome.runtime.onConnect.addListener(onConnect);
     });
     const [wnd] = await Promise.all([
-      chrome.windows.create({ type: 'popup', url: this._recorderUrl }),
+      chrome.windows.create({ type: 'popup', url: this._recorderUrl, tabId: 1 }),
       this._portPromise,
     ]);
     this._window = wnd;
